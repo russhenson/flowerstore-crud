@@ -2,7 +2,7 @@
 import {
   getProducts,
   getProductById,
-  insertProduct,
+  addProduct,
   updateProductById,
   deleteProductById,
 } from "../models/productModel.js";
@@ -32,7 +32,7 @@ export const showProductById = (req, res) => {
 // Create New Product
 export const createProduct = (req, res) => {
   const data = req.body;
-  insertProduct(data, (err, results) => {
+  addProduct(data, (err, results) => {
     if (err) {
       res.send(err);
     } else {
