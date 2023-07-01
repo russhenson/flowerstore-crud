@@ -25,12 +25,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // use router
 app.use(Router);
 
-app.get("/products", showProducts);
-app.get("/products/:id", showProductById);
-app.post("/products", createProduct);
-app.put("/products/:id", updateProduct);
-app.delete("/products/:id", deleteProduct);
-
 const port = process.env.PORT || 5000;
 app.listen(port, () =>
   console.log(`Server running on http://localhost:${port}`)
