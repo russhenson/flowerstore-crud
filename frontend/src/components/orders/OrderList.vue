@@ -83,7 +83,7 @@ export default {
     async getOrdersByUserId(userId) {
       try {
         const response = await axios.get(
-          `http://flowerstore-crud.vercel.app/orders/${userId}`
+          `https://flowerstore-crud.vercel.app/orders/${userId}`
         );
         this.items = response.data;
       } catch (err) {
