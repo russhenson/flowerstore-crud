@@ -75,7 +75,7 @@ export default {
   methods: {
     async getUsers() {
       try {
-        const response = await axios.get("http://localhost:5000/users");
+        const response = await axios.get("http://flowerstore-crud.vercel.app/users");
         this.totalUsers = response.data.length;
         this.getUserById(this.userId);
         this.$emit("user-selected", this.userId);
@@ -85,7 +85,7 @@ export default {
     },
     async getUserById(id) {
       try {
-        const response = await axios.get(`http://localhost:5000/users/${id}`);
+        const response = await axios.get(`http://flowerstore-crud.vercel.app/users/${id}`);
         this.firstName = response.data.first_name;
         this.lastName = response.data.last_name;
         this.emailAddress = response.data.email_address;
@@ -110,7 +110,7 @@ export default {
     async updateUser() {
       try {
         await axios.put(
-          `http://localhost:5000/products/${this.$route.params.id}`,
+          `http://flowerstore-crud.vercel.app/products/${this.$route.params.id}`,
           {
             product_name: this.productName,
             product_description: this.productDescription,
