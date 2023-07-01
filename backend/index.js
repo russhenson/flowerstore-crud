@@ -2,13 +2,6 @@ import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import Router from "./routes/routes.js";
-import {
-  showProducts,
-  showProductById,
-  createProduct,
-  updateProduct,
-  deleteProduct,
-} from "./controllers/product.js";
 
 // init express
 const app = express();
