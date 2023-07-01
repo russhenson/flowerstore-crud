@@ -1,6 +1,11 @@
 <template>
   <div class="products-container">
-    <div v-for="item in items" :key="item.id" :class="['card', { inactive: item.status === 'Inactive' }]">
+    
+    <div
+      v-for="item in items"
+      :key="item.id"
+      :class="['card', { inactive: item.status === 'Inactive' }]"
+    >
       <img src="../../assets/dummy-img.png" alt="dummy product" />
       <h2 class="product-name">{{ item.product_name }}</h2>
       <p class="product-desc">{{ item.product_description }}</p>
@@ -12,7 +17,10 @@
       <div class="product-actions">
         <router-link
           :to="{ name: 'Edit', params: { id: item.id } }"
-          :class="['product-edit-btn', { exception: item.status === 'Inactive' }]"
+          :class="[
+            'product-edit-btn',
+            { exception: item.status === 'Inactive' },
+          ]"
         >
           Edit
         </router-link>
@@ -20,6 +28,7 @@
           class="product-delete-btn"
           @click="deleteProduct(item.id)"
           :disabled="item.status === 'Inactive'"
+          v-if="item.status !== 'Inactive'"
         >
           Delete
         </button>

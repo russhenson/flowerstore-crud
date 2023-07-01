@@ -5,7 +5,7 @@
   margin-left: 30rem;
 }
 .card {
-  background-color: #FAF9F9;
+  background-color: #faf9f9;
   border-radius: 20px;
   overflow: hidden;
 
@@ -15,6 +15,7 @@
   color: #1a1a1a;
   height: 100%;
   box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  position: relative;
 }
 
 .card img {
@@ -43,7 +44,7 @@
 }
 
 .product-qty-num {
-  background-color: #BEE3DB;
+  background-color: #bee3db;
   padding: 0.1rem 1.6rem;
   border-radius: 0 10px 10px 0px;
 }
@@ -51,7 +52,7 @@
 .product-price {
   font-size: 3rem;
   font-weight: 600;
-  color: #555B6E;
+  color: #555b6e;
   margin-bottom: 1.6rem;
 }
 
@@ -64,7 +65,7 @@
 }
 
 .product-edit-btn {
-  width: 50%;
+  width: 100%;
   text-align: center;
   background-color: #a8eedf;
   padding: 0.3rem 0.8rem;
@@ -81,7 +82,7 @@
 
 .product-delete-btn {
   border: none;
-  width: 50%;
+  width: 100%;
   text-align: center;
   background-color: #eea8a8;
   padding: 0.3rem 0.8rem;

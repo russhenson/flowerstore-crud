@@ -20,9 +20,9 @@
       </div>
       <div class="user-btns">
         <button class="user-btn" @click="prevUser">Prev</button>
-
         <button class="user-btn" @click="nextUser">Next</button>
       </div>
+      <p class="note">Click "View Orders" and navigate through each orders using "Prev" and "Next" buttons.</p>
 
       <div class="nav">
         <router-link :to="{ name: 'Index' }" class="router-link-btn"
