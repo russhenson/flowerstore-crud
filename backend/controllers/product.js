@@ -7,25 +7,25 @@ import {
   deleteProductById,
 } from "../models/productModel.js";
 
+const handleResponse = (res, err, results) => {
+  if (err) {
+    res.status(500).json({ error: "Internal server error" });
+  } else {
+    res.status(200).json(results);
+  }
+};
+
 // Get All Products
 export const showProducts = (req, res) => {
   getProducts((err, results) => {
-    if (err) {
-      res.send(err);
-    } else {
-      res.json(results);
-    }
+    handleResponse(res, err, results);
   });
 };
 
 // Get Single Product
 export const showProductById = (req, res) => {
   getProductById(req.params.id, (err, results) => {
-    if (err) {
-      res.send(err);
-    } else {
-      res.json(results);
-    }
+    handleResponse(res, err, results);
   });
 };
 
@@ -33,11 +33,7 @@ export const showProductById = (req, res) => {
 export const createProduct = (req, res) => {
   const data = req.body;
   addProduct(data, (err, results) => {
-    if (err) {
-      res.send(err);
-    } else {
-      res.json(results);
-    }
+    handleResponse(res, err, results);
   });
 };
 
@@ -46,11 +42,7 @@ export const updateProduct = (req, res) => {
   const data = req.body;
   const id = req.params.id;
   updateProductById(data, id, (err, results) => {
-    if (err) {
-      res.send(err);
-    } else {
-      res.json(results);
-    }
+    handleResponse(res, err, results);
   });
 };
 
@@ -58,10 +50,6 @@ export const updateProduct = (req, res) => {
 export const deleteProduct = (req, res) => {
   const id = req.params.id;
   deleteProductById(id, (err, results) => {
-    if (err) {
-      res.send(err);
-    } else {
-      res.json(results);
-    }
+    handleResponse(res, err, results);
   });
 };
