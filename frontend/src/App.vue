@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="container is-max-desktop">
-      <router-view />
+    <router-view />
   </div>
 </template>
 
@@ -10,7 +10,4 @@ export default {
 };
 </script>
 
-<style>
-/* import style bulma */
-/* @import "~bulma/css/bulma.css"; */
-</style>
+<style src="./styles/app.css"></style>

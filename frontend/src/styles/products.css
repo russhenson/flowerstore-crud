@@ -1,0 +1,107 @@
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-left: 30rem;
+}
+.card {
+  background-color: #FAF9F9;
+  border-radius: 20px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #1a1a1a;
+  height: 100%;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.product-desc {
+  margin-bottom: 2rem;
+}
+
+.product-qty {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.product-qty-title {
+  background-color: #aed2ca;
+  padding: 0.1rem 1.6rem;
+  border-radius: 10px 0 0 10px;
+  font-weight: 500;
+}
+
+.product-desc {
+  padding: 0 1.2rem;
+  text-align: justify;
+}
+
+.product-qty-num {
+  background-color: #BEE3DB;
+  padding: 0.1rem 1.6rem;
+  border-radius: 0 10px 10px 0px;
+}
+
+.product-price {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #555B6E;
+  margin-bottom: 1.6rem;
+}
+
+.product-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+  width: 80%;
+  padding: 0 1rem;
+}
+
+.product-edit-btn {
+  width: 50%;
+  text-align: center;
+  background-color: #a8eedf;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #1a1a1a;
+
+  transition: background-color 0.2s ease-in;
+}
+
+.product-edit-btn:hover {
+  background-color: rgba(168, 238, 223, 0.7);
+}
+
+.product-delete-btn {
+  border: none;
+  width: 50%;
+  text-align: center;
+  background-color: #eea8a8;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #1a1a1a;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease-in;
+}
+
+.product-delete-btn:hover {
+  background-color: rgba(238, 168, 168, 0.7);
+}
+
+.product-delete-btn:disabled {
+  cursor: default;
+  background-color: #eea8a8;
+}
+
+.card.inactive {
+  opacity: 0.3;
+}

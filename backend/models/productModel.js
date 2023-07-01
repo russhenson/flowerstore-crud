@@ -44,13 +44,14 @@ export const addProduct = (data, result) => {
 // Update Product
 export const updateProductById = (data, id, result) => {
   db.query(
-    "UPDATE products_table SET product_name = ?, product_description = ?, quantity = ?, price = ?, updated_at = ? WHERE id = ?",
+    "UPDATE products_table SET product_name = ?, product_description = ?, quantity = ?, price = ?, updated_at = ?, status = ? WHERE id = ?",
     [
       data.product_name,
       data.product_description,
       data.quantity,
       data.price,
       new Date(),
+      data.status,
       id,
     ],
     (err, results) => {

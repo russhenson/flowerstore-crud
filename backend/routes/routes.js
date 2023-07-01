@@ -9,28 +9,27 @@ import {
   updateProduct,
   deleteProduct,
 } from "../controllers/product.js";
+import { showUsers, showUserById, updateUser } from "../controllers/user.js";
+import { showOrdersByUserId } from "../controllers/order.js";
 
 // init express router
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.send('Hello, this is the root path!');
+router.get("/", (req, res) => {
+  res.send("Hello, this is the root path!");
 });
 
-// Get All Product
 router.get("/products", showProducts);
-
-// Get Single Product
 router.get("/products/:id", showProductById);
-
-// Create New Product
 router.post("/products", createProduct);
-
-// Update Product
 router.put("/products/:id", updateProduct);
-
-// Delete Product
 router.delete("/products/:id", deleteProduct);
+
+router.get("/users", showUsers);
+router.get("/users/:id", showUserById);
+router.put("/users/:id", updateUser);
+
+router.get("/orders/:id", showOrdersByUserId);
 
 // export default router
 export default router;

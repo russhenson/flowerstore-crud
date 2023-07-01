@@ -1,0 +1,87 @@
+.user-container {
+  width: 20%;
+  position: fixed;
+  height: calc(100% - 4rem);
+}
+.user-card {
+  background-color: #f1f1f1;
+  padding: 2rem 2.4rem;
+  height: calc(100% - 4rem);
+  border-radius: 20px;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.user-pic {
+  width: 80%;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.user-name {
+  text-align: center;
+}
+
+.user-status {
+  width: 50%;
+  align-self: center;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.user-status-active {
+  background-color: #a8eedf;
+}
+
+.user-status-inactive {
+  background-color: #eea8a8;
+}
+
+.user-info {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.user-btns {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.2rem;
+  margin-bottom: 6rem;
+}
+
+.user-btn {
+  width: 100%;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 20px;
+  background-color: #aed2ca;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.router-link-btn {
+  background-color: red;
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 500;
+  background: #BEE3DB;
+}
+
+.credits {
+  margin-top: auto;
+  text-align: center;
+  opacity: 0.5;
+}
