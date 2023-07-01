@@ -17,6 +17,8 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
   res.send("Hello, this is the root path!");
+  res.setHeader('Content-Type', 'text/html');
+  res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
 });
 
 router.get("/products", showProducts);
