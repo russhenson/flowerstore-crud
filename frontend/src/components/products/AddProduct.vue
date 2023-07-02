@@ -112,7 +112,7 @@ export default {
     // Create New product
     async saveProduct() {
       try {
-        await axios.post("https://flowerstore-crud.vercel.app/products", {
+        await axios.post("http://localhost:5000/products", {
           product_name: this.productName,
           product_description: this.productDescription,
           quantity: this.productQuantity,

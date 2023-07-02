@@ -57,7 +57,7 @@ export default {
     // Get All Products
     async getProducts() {
       try {
-        const response = await axios.get("https://flowerstore-crud.vercel.app/products");
+        const response = await axios.get("http://localhost:5000/products");
         this.items = response.data.reverse();
       } catch (err) {
         console.log(err);
@@ -67,7 +67,7 @@ export default {
     // Delete Product
     async deleteProduct(id) {
       try {
-        await axios.delete(`https://flowerstore-crud.vercel.app/products/${id}`);
+        await axios.delete(`http://localhost:5000/products/${id}`);
         this.getProducts();
       } catch (err) {
         console.log(err);

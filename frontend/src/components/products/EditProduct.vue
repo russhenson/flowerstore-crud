@@ -132,7 +132,7 @@ export default {
     async getProductById() {
       try {
         const response = await axios.get(
-          `https://flowerstore-crud.vercel.app/products/${this.$route.params.id}`
+          `http://localhost:5000/products/${this.$route.params.id}`
         );
         this.productName = response.data.product_name;
         this.productDescription = response.data.product_description;
@@ -148,7 +148,7 @@ export default {
     async updateProduct() {
       try {
         await axios.put(
-          `https://flowerstore-crud.vercel.app/products/${this.$route.params.id}`,
+          `http://localhost:5000/products/${this.$route.params.id}`,
           {
             product_name: this.productName,
             product_description: this.productDescription,
