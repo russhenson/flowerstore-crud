@@ -6,14 +6,7 @@ import {
   updateProductById,
   deleteProductById,
 } from "../models/productModel.js";
-
-const handleResponse = (res, err, results) => {
-  if (err) {
-    res.status(500).json({ error: "Internal server error" });
-  } else {
-    res.status(200).json(results);
-  }
-};
+import { handleResponse } from "./handler.js"; 
 
 // Get All Products
 export const showProducts = (req, res) => {

@@ -2,7 +2,7 @@ import mysql from "mysql2";
    
 // create the connection to database
 const db = mysql.createConnection({
-    host: 'flowerstore-crud.vercel.app',
+    host: 'localhost',
     user: 'root',
     password: 'RussDB!10@root',
     database: 'flowerstoredb'
