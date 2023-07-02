@@ -43,8 +43,10 @@ Before running the project, ensure that you have the following installed on your
    npm install
    npm start
 
-6. **Install frontend dependencies and start the Vue.js application:**
-
+6. **Access frontend in Two Ways:** 
+   <br><br>A. The frontend of the project is deployed on Vercel. Just successfully run the backend locally and go to https://minishop-two.vercel.app/
+   <br>B. Or, install frontend dependencies and start the Vue.js application:
+   
    ```shell
    cd frontend
    npm install
