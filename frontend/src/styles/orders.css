@@ -1,5 +1,6 @@
 .orders-container {
   margin-left: 30rem;
+  flex-grow: 1;
   background-color: #FAF9F9;
   border-radius: 20px;
   display: flex;
